@@ -16,6 +16,22 @@
   let accent-color = rgb("#0077be")  // Blue
   let grey-color = rgb("#666666")    // Grey for descriptions
 
+  let to-string(content) = {
+    if content.has("text") {
+      if type(content.text) == "string" {
+        content.text
+      } else {
+        to-string(content.text)
+      }
+    } else if content.has("children") {
+      content.children.map(to-string).join("")
+    } else if content.has("body") {
+      to-string(content.body)
+    } else if content == [ ] {
+      " "
+    }
+  }
+
   set page(
     paper: paper,
     margin: margin,
@@ -23,20 +39,24 @@
   set par(justify: true)
   set text(lang: lang,
            region: region,
-           font: font,
+           font: "Inria Serif",
            size: fontsize)
 
   // Helper function for section titles
   let section-title(title) = {
     v(0.5em)
-    text(weight: "bold", size: 1.2em, fill: accent-color)[#title]
-    line(length: 100%, stroke: 0.5pt + accent-color)
+    text(weight: "bold", size: 1.2em)[#title]
+    line(length: 100%, stroke: 0.5pt)
     v(0.3em)
   }
 
   // Header
   // Name and summary
-  text(weight: "bold", size: 1.5em, fill: accent-color)[#name]
+  let (first-name, last-name) = to-string(name).split(" ")
+  [
+    #text(weight: "bold", size: 2em, fill: accent-color)[#first-name]
+    #text(weight: "bold", size: 2em, fill: black)[#last-name]
+  ]
   v(0.5em)
   if summary != none {
     [#summary]
@@ -49,6 +69,7 @@
     {
       // Sidebar
       // Contact information
+      section-title("Contact Info")
       for (key, value) in contact {
         [#value]
         linebreak()
