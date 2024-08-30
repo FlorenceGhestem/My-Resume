@@ -1,10 +1,10 @@
 ---
 name: John Doe
+summary: "Experienced software engineer with a passion for creating efficient and scalable solutions. Skilled in full-stack development and machine learning."
 contact:
   email: john.doe@example.com
   phone: (123) 456-7890
   location: New York, NY
-summary: "Experienced software engineer with a passion for creating efficient and scalable solutions. Skilled in full-stack development and machine learning."
 skills:
   - name: Programming Languages
     items:
@@ -21,23 +21,34 @@ main_sections:
     entries:
       - title: Senior Software Engineer
         date: 2020-Present
-        details: "Tech Corp Inc., Led development of..."
+        organization: Tech Corp Inc.
+        location: San Francisco, USA
+        description:
+          - Led development of a machine learning platform
+          - Improved system efficiency by 40%
       - title: Software Engineer
         date: 2018-2020
-        details: "Startup Ltd., Developed and maintained..."
+        organization: Startup Ltd.
+        location: New York, USA
+        description:
+          - Developed and maintained web applications
+          - Implemented CI/CD pipeline
   - title: Education
     entries:
       - title: Master of Science in Computer Science
         date: 2018-2020
-        details: "University of Example, GPA: 3.8/4.0"
+        organization: University of Example
+        location: Boston, USA
+        description:
+          - Specialized in Artificial Intelligence
+          - Thesis: "Deep Learning in Natural Language Processing"
       - title: Bachelor of Science in Computer Science
         date: 2014-2018
-        details: "Example State University, GPA: 3.7/4.0"
-  - title: Publications
-    entries:
-      - title: "Machine Learning in Practice"
-        date: 2022
-        details: "Published in Journal of AI Research"
+        organization: Example State University
+        location: Chicago, USA
+        description:
+          - Minor in Mathematics
+          - Graduated with Honors
 format:
   typst:
     page: a4
@@ -47,5 +58,3 @@ format:
       - assets/typst/typst-template.typ
       - assets/typst/typst-show.typ
 ---
-
-Additional content (if any) goes here.

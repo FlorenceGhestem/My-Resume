@@ -36,7 +36,13 @@ $for(it.entries)$
         (
           title: [$it.title$],
           date: [$it.date$],
-          details: [$it.details$]
+          organization: [$it.organization$],
+          location: [$it.location$],
+          description: (
+$for(it.description)$
+            [$it$],
+$endfor$
+          ),
         ),
 $endfor$
       )

@@ -13,7 +13,8 @@
   doc,
 ) = {
   // Define colors
-  let accent-color = rgb("#0077be")  // A nice blue color
+  let accent-color = rgb("#0077be")  // Blue
+  let grey-color = rgb("#666666")    // Grey for descriptions
 
   set page(
     paper: paper,
@@ -28,39 +29,39 @@
   // Helper function for section titles
   let section-title(title) = {
     v(0.5em)
-    text(weight: "bold", size: 1.2em)[#title]
-    line(length: 100%, stroke: 0.5pt)
+    text(weight: "bold", size: 1.2em, fill: accent-color)[#title]
+    line(length: 100%, stroke: 0.5pt + accent-color)
     v(0.3em)
   }
 
   // Header
-  if name != none {
-    align(center)[#text(weight: "bold", size: 1.5em, fill: accent-color)[#name]]
-  }
+  grid(
+    columns: (70%, 30%),
+    gutter: 1em,
+    {
+      // Name and summary
+      text(weight: "bold", size: 1.5em, fill: accent-color)[#name]
+      v(0.5em)
+      if summary != none {
+        [#summary]
+      }
+    },
+    {
+      // Contact information
+      for (key, value) in contact {
+        [#value]
+        linebreak()
+      }
+    }
+  )
 
-  // Contact information
-  if contact != () {
-    let contact_entries = contact.pairs().map(((key, value)) => [#value])
-    align(center)[
-      #contact_entries.join([#h(1em)•#h(1em)])
-    ]
-  }
-
-  // Add some space after the header
-  v(0.5em)
-
-  // Create a grid for the main layout
+  // Main content grid
   grid(
     columns: (30%, 70%),
     gutter: 1em,
     {
       // Sidebar
-      if summary != none {
-        section-title("Summary")
-        [#summary]
-        v(1em)
-      }
-      
+      v(1em)
       if skills != () {
         section-title("Skills")
         for category in skills {
@@ -71,17 +72,22 @@
       }
     },
     {
-      // Main content
+      // Main sections
       for section in main_sections {
         section-title(section.title)
         for entry in section.entries {
           grid(
             columns: (auto, 1fr),
             gutter: 1em,
+            text(style: "italic")[#entry.date],
             text(weight: "bold", fill: accent-color)[#entry.title],
-            align(right)[#emph[#entry.date]],
           )
-          pad(left: 1em)[#entry.details]
+          [#entry.organization, #entry.location]
+          if entry.description != none {
+            list(
+              ..entry.description.map(item => [#text(fill: grey-color)[#item]])
+            )
+          }
           v(0.5em)
         }
       }
