@@ -12,6 +12,9 @@
   fontsize: 11pt,
   doc,
 ) = {
+  // Define colors
+  let accent-color = rgb("#0077be")  // A nice blue color
+
   set page(
     paper: paper,
     margin: margin,
@@ -22,9 +25,17 @@
            font: font,
            size: fontsize)
 
+  // Helper function for section titles
+  let section-title(title) = {
+    v(0.5em)
+    text(weight: "bold", size: 1.2em)[#title]
+    line(length: 100%, stroke: 0.5pt)
+    v(0.3em)
+  }
+
   // Header
   if name != none {
-    align(center)[#text(weight: "bold", size: 1.5em)[#name]]
+    align(center)[#text(weight: "bold", size: 1.5em, fill: accent-color)[#name]]
   }
 
   // Contact information
@@ -46,15 +57,15 @@
       // Sidebar
       v(1em)
       if summary != none {
-        heading(level: 2, numbering: none, outlined: false)[Summary]
+        section-title("Summary")
         [#summary]
         v(1em)
       }
       
       if skills != () {
-        heading(level: 2, numbering: none, outlined: false)[Skills]
+        section-title("Skills")
         for category in skills {
-          [*#category.name*]
+          text(weight: "bold")[#category.name]
           list(..category.items)
           v(0.5em)
         }
@@ -63,12 +74,12 @@
     {
       // Main content
       for section in main_sections {
-        heading(level: 2, numbering: none, outlined: false)[#section.title]
+        section-title(section.title)
         for entry in section.entries {
           grid(
             columns: (auto, 1fr),
             gutter: 1em,
-            [*#entry.title*],
+            text(weight: "bold", fill: accent-color)[#entry.title],
             align(right)[#emph[#entry.date]],
           )
           pad(left: 1em)[#entry.details]
