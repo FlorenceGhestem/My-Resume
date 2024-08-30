@@ -39,7 +39,7 @@
   set par(justify: true)
   set text(lang: lang,
            region: region,
-           font: "Inria Serif",
+           font: font,
            size: fontsize)
 
   // Helper function for section titles
