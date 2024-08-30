@@ -14,7 +14,15 @@ $if(sections)$
 $for(sections)$
     (
       title: [$it.title$],
-      content: [$it.content$]
+      entries: (
+$for(it.entries)$
+        (
+          title: [$it.title$],
+          date: [$it.date$],
+          details: [$it.details$]
+        ),
+$endfor$
+      )
     ),
 $endfor$
   ),

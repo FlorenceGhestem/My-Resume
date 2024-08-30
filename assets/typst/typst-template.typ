@@ -39,26 +39,17 @@
   // Sections
   for section in sections {
     heading(level: 2, numbering: none, outlined: false)[#section.title]
-    [#section.content]
+    for entry in section.entries {
+      grid(
+        columns: (auto, 1fr),
+        gutter: 1em,
+        [*#entry.title*],
+        align(right)[#emph[#entry.date]],
+      )
+      pad(left: 1em)[#entry.details]
+      v(0.5em)
+    }
   }
 
   doc
-}
-
-// Utility functions
-#let entry(title, date, details) = {
-  grid(
-    columns: (auto, 1fr),
-    gutter: 1em,
-    [*#title*],
-    align(right)[#emph[#date]],
-  )
-  pad(left: 1em)[#details]
-  v(0.5em)
-}
-
-#let cvSection(title, entries) = {
-  for e in entries {
-    entry(e.title, e.date, e.details)
-  }
 }

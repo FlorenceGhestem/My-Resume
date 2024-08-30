@@ -6,17 +6,21 @@ contact:
   location: New York, NY
 sections:
   - title: Education
-    content: |
-      #cvSection("Education", (
-        (title: "Master of Science in Computer Science", date: "2018-2020", details: "University of Example, GPA: 3.8/4.0"),
-        (title: "Bachelor of Science in Computer Science", date: "2014-2018", details: "Example State University, GPA: 3.7/4.0"),
-      ))
+    entries:
+      - title: Master of Science in Computer Science
+        date: 2018-2020
+        details: "University of Example, GPA: 3.8/4.0"
+      - title: Bachelor of Science in Computer Science
+        date: 2014-2018
+        details: "Example State University, GPA: 3.7/4.0"
   - title: Experience
-    content: |
-      #cvSection("Experience", (
-        (title: "Senior Software Engineer", date: "2020-Present", details: "Tech Corp Inc., Led development of..."),
-        (title: "Software Engineer", date: "2018-2020", details: "Startup Ltd., Developed and maintained..."),
-      ))
+    entries:
+      - title: Senior Software Engineer
+        date: 2020-Present
+        details: "Tech Corp Inc., Led development of..."
+      - title: Software Engineer
+        date: 2018-2020
+        details: "Startup Ltd., Developed and maintained..."
 format:
   typst:
     page: a4
