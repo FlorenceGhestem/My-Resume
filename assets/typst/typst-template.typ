@@ -27,16 +27,18 @@
 
   // Contact information
   if contact != () {
+    let contact_entries = contact.pairs().map(((key, value)) => [#value])
     align(center)[
-      #for (key, value) in contact [
-        #value #h(1em)
-      ]
+      #contact_entries.join([#h(1em)•#h(1em)])
     ]
   }
 
+  // Add some space after the header
+  v(0.5em)
+
   // Sections
   for section in sections {
-    heading(level: 2, numbering: none)[#section.title]
+    heading(level: 2, numbering: none, outlined: false)[#section.title]
     [#section.content]
   }
 
@@ -49,13 +51,13 @@
     columns: (auto, 1fr),
     gutter: 1em,
     [*#title*],
-    align(right)[#date],
+    align(right)[#emph[#date]],
   )
-  [#details]
+  pad(left: 1em)[#details]
+  v(0.5em)
 }
 
 #let cvSection(title, entries) = {
-  heading(level: 2, numbering: none)[#title]
   for e in entries {
     entry(e.title, e.date, e.details)
   }

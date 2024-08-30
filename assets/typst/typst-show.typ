@@ -4,7 +4,7 @@ $if(name)$
 $endif$
 $if(contact)$
   contact: (
-$for(contact)$
+$for(contact/pairs)$
     $contact.key$: [$contact.value$],
 $endfor$
   ),
