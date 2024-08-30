@@ -55,7 +55,6 @@
     gutter: 1em,
     {
       // Sidebar
-      v(1em)
       if summary != none {
         section-title("Summary")
         [#summary]
