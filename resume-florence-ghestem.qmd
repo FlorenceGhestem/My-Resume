@@ -4,15 +4,19 @@ contact:
   email: john.doe@example.com
   phone: (123) 456-7890
   location: New York, NY
-sections:
-  - title: Education
-    entries:
-      - title: Master of Science in Computer Science
-        date: 2018-2020
-        details: "University of Example, GPA: 3.8/4.0"
-      - title: Bachelor of Science in Computer Science
-        date: 2014-2018
-        details: "Example State University, GPA: 3.7/4.0"
+summary: "Experienced software engineer with a passion for creating efficient and scalable solutions. Skilled in full-stack development and machine learning."
+skills:
+  - name: Programming Languages
+    items:
+      - Python
+      - JavaScript
+      - C++
+  - name: Frameworks
+    items:
+      - React
+      - Django
+      - TensorFlow
+main_sections:
   - title: Experience
     entries:
       - title: Senior Software Engineer
@@ -21,6 +25,19 @@ sections:
       - title: Software Engineer
         date: 2018-2020
         details: "Startup Ltd., Developed and maintained..."
+  - title: Education
+    entries:
+      - title: Master of Science in Computer Science
+        date: 2018-2020
+        details: "University of Example, GPA: 3.8/4.0"
+      - title: Bachelor of Science in Computer Science
+        date: 2014-2018
+        details: "Example State University, GPA: 3.7/4.0"
+  - title: Publications
+    entries:
+      - title: "Machine Learning in Practice"
+        date: 2022
+        details: "Published in Journal of AI Research"
 format:
   typst:
     page: a4

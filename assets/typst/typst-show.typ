@@ -9,9 +9,26 @@ $for(contact/pairs)$
 $endfor$
   ),
 $endif$
-$if(sections)$
-  sections: (
-$for(sections)$
+$if(summary)$
+  summary: [$summary$],
+$endif$
+$if(skills)$
+  skills: (
+$for(skills)$
+    (
+      name: [$it.name$],
+      items: (
+$for(it.items)$
+        [$it$],
+$endfor$
+      )
+    ),
+$endfor$
+  ),
+$endif$
+$if(main_sections)$
+  main_sections: (
+$for(main_sections)$
     (
       title: [$it.title$],
       entries: (
