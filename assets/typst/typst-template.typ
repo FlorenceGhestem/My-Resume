@@ -16,6 +16,7 @@
   let accent-color = rgb("#0077be")  // Blue
   let grey-color = rgb("#666666")    // Grey for descriptions
 
+  // I have to check / correct these weird tricks
   let to-string(content) = {
     if content.has("text") {
       if type(content.text) == "string" {
@@ -32,6 +33,13 @@
     }
   }
 
+  show link: it => {
+    set text(size: 0.7em)
+    it
+  }
+
+  // until here
+
   set page(
     paper: paper,
     margin: margin,
@@ -42,7 +50,6 @@
            font: font,
            size: fontsize)
 
-  // Helper function for section titles
   let section-title(title) = {
     v(0.5em)
     text(weight: "bold", size: 1.2em)[#title]
@@ -50,11 +57,9 @@
     v(0.3em)
   }
 
-  // Header
-  // Name and summary
   let (first-name, last-name) = to-string(name).split(" ")
   [
-    #text(weight: "bold", size: 2em, fill: accent-color)[#first-name]
+    #text(size: 2em, fill: accent-color)[#first-name]
     #text(weight: "bold", size: 2em, fill: black)[#last-name]
   ]
   v(0.5em)
@@ -62,16 +67,15 @@
     [#summary]
   }
 
-  // Main content grid
   grid(
-    columns: (30%, 70%),
+    columns: (30%, 60%),
     gutter: 1em,
     {
       // Sidebar
       // Contact information
       section-title("Contact Info")
       for (key, value) in contact {
-        [#value]
+        link(to-string(value))
         linebreak()
       }
 
@@ -79,6 +83,7 @@
         section-title("Skills")
         for category in skills {
           text(weight: "bold")[#category.name]
+          set text(size: 0.8em)
           list(..category.items)
           v(0.5em)
         }
@@ -92,8 +97,8 @@
           grid(
             columns: (auto, 1fr),
             gutter: 1em,
-            text(style: "italic")[#entry.date],
             text(weight: "bold", fill: accent-color)[#entry.title],
+            align(right)[#emph[#entry.date]],
           )
           [#entry.organization, #entry.location]
           if entry.description != none {
