@@ -1,57 +1,30 @@
 ---
-title: "John Doe"
-subtitle: "Software Engineer"
+name: John Doe
+contact:
+  email: john.doe@example.com
+  phone: (123) 456-7890
+  location: New York, NY
+sections:
+  - title: Education
+    content: |
+      #cvSection("Education", (
+        (title: "Master of Science in Computer Science", date: "2018-2020", details: "University of Example, GPA: 3.8/4.0"),
+        (title: "Bachelor of Science in Computer Science", date: "2014-2018", details: "Example State University, GPA: 3.7/4.0"),
+      ))
+  - title: Experience
+    content: |
+      #cvSection("Experience", (
+        (title: "Senior Software Engineer", date: "2020-Present", details: "Tech Corp Inc., Led development of..."),
+        (title: "Software Engineer", date: "2018-2020", details: "Startup Ltd., Developed and maintained..."),
+      ))
 format:
   typst:
     page: a4
     date: last-modified
     number-sections: true
     template-partials:
-      - /assets/typst/typst-template.typ
+      - assets/typst/typst-template.typ
+      - assets/typst/typst-show.typ
 ---
 
-## Summary
-
-Experienced software engineer with a passion for creating efficient and scalable applications. Skilled in full-stack development, cloud technologies, and agile methodologies.
-
-## Skills
-
-- Programming Languages: Python, JavaScript, Java
-- Web Technologies: React, Node.js, Django
-- Databases: PostgreSQL, MongoDB
-- Cloud Platforms: AWS, Google Cloud
-- DevOps: Docker, Kubernetes, CI/CD
-
-## Experience
-
-### Senior Software Engineer | TechCorp Inc. | 2020 - Present
-
-- Led development of a microservices-based e-commerce platform
-- Implemented automated testing and deployment pipelines
-- Mentored junior developers and conducted code reviews
-
-### Software Engineer | InnoSoft Solutions | 2017 - 2020
-
-- Developed and maintained multiple web applications using React and Django
-- Optimized database queries, improving application performance by 40%
-- Collaborated with UX designers to implement responsive designs
-
-## Education
-
-### Bachelor of Science in Computer Science | Tech University | 2013 - 2017
-
-- GPA: 3.8/4.0
-- Relevant coursework: Data Structures, Algorithms, Software Engineering, Database Systems
-
-## Projects
-
-### Personal Blog Engine | [GitHub](https://github.com/johndoe/blog-engine)
-
-- Developed a custom blog engine using Node.js and MongoDB
-- Implemented features like user authentication, comment system, and RSS feed
-
-## Contact
-
-- Email: john.doe@email.com
-- LinkedIn: [linkedin.com/in/johndoe](https://linkedin.com/in/johndoe)
-- GitHub: [github.com/johndoe](https://github.com/johndoe)
+Additional content (if any) goes here.
