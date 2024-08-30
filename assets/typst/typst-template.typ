@@ -35,25 +35,12 @@
   }
 
   // Header
-  grid(
-    columns: (70%, 30%),
-    gutter: 1em,
-    {
-      // Name and summary
-      text(weight: "bold", size: 1.5em, fill: accent-color)[#name]
-      v(0.5em)
-      if summary != none {
-        [#summary]
-      }
-    },
-    {
-      // Contact information
-      for (key, value) in contact {
-        [#value]
-        linebreak()
-      }
-    }
-  )
+  // Name and summary
+  text(weight: "bold", size: 1.5em, fill: accent-color)[#name]
+  v(0.5em)
+  if summary != none {
+    [#summary]
+  }
 
   // Main content grid
   grid(
@@ -61,7 +48,12 @@
     gutter: 1em,
     {
       // Sidebar
-      v(1em)
+      // Contact information
+      for (key, value) in contact {
+        [#value]
+        linebreak()
+      }
+
       if skills != () {
         section-title("Skills")
         for category in skills {
