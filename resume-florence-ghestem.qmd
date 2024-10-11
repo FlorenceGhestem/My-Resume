@@ -1,0 +1,77 @@
+---
+name: Florence Ghestem
+summary: _Ph.D_ candidate in Biostatistics based in Paris, France. I am specializing in genotype-phenotype associations through high dimensional data integration.
+contact:
+  - text: CESP, INSERM, Paris
+    link: none
+  - text: Personal website
+    link: https://florenceghestem.github.io/
+  - text: LinkedIn
+    link: https://linkedin.com/in/florence-ghestem-data-sciences
+  - text: ORCID
+    link: https://orcid.org/0009-0000-0699-7751
+  - text: GitHub
+    link: https://github.com/FlorenceGhestem
+skills:
+  - name: IT
+    items:
+     - R, Python, and Bash languages
+     - SQL (Bigquery) and NoSQL database management
+     - Code versioning and project management with GitHub
+     - Development environment based on GCP and Docker
+     - Writing tools, reference management (Zotero, Quarto)
+     - Office suite (Word, Excel, PowerPoint)
+  - name: Languages
+    items:
+      - "English: C1 level (TOEIC 975 points)"
+      - "Spanish: B2 level"
+main_sections:
+  - title: Experience
+    entries:
+      - title: _Ph.D_ Student in biostatistics
+        date: September 2024 - Today
+        organization: CESP - INSERM
+        location: Villejuif, France
+        description:
+          - Develop methods for integrating deep and multiscale phenotypic data.
+          - Identify genotype-phenotype associations with significant biological implications.
+      - title: Consultant in biostatistic 
+        date: September 2022 – September 2024
+        organization: IT&M Stats
+        location: Boulogne-Billancourt, France
+        description:
+          - Statistical analysis of studies aiming to link skin biomarkers with clinical signs (PLS, factorial analyses, mixed models).
+          - Monitoring and project management of a cohort of 10,000 people.
+          - Bibliographic research.
+      - title: Internship - Staticician
+        date: March 2022 – September 2022
+        organization: Chanel
+        location: Paris, France
+        description:
+          - "Data management: creation of a clinical results database."
+          - "Data visualization, descriptive statistics, structural equation models."
+  - title: Education
+    entries:
+      - title: Master of Science in Data Sciences for Biology
+        date: 2019-2022
+        organization: Institut Agro
+        location: Rennes, France
+        description: 
+          - "Factorial analysis, machine learning, computer science, economics, statistics applied to perception data."
+          - "Thesis: Construction and Evaluation of Clinical Performance Scores"
+      - title: Diploma in Technological Studies
+        date: 2017-2019
+        organization: Avignon Univeristy
+        location: Avignon, France
+        description: 
+          - Major in Biological Engineering
+          - Statistics, bioinformatics, genetics, plant, and animal biology.
+format:
+  typst:
+    page: a4
+    date: last-modified
+    number-sections: true
+    template-partials:
+      - assets/typst/typst-template.typ
+      - assets/typst/typst-show.typ
+---
