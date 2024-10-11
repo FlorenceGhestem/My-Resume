@@ -4,8 +4,11 @@ $if(name)$
 $endif$
 $if(contact)$
   contact: (
-$for(contact/pairs)$
-    $contact.key$: [$contact.value$],
+$for(contact)$
+    (
+      text: [$it.text$],
+      link: [$it.link$]
+    ),
 $endfor$
   ),
 $endif$

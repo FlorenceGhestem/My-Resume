@@ -7,7 +7,7 @@
   margin: (x: 0.75in, y: 0.75in),
   paper: "us-letter",
   lang: "en",
-  region: "US",
+  region: "UK",
   font: (),
   fontsize: 11pt,
   doc,
@@ -16,7 +16,6 @@
   let accent-color = rgb("#0077be")  // Blue
   let grey-color = rgb("#666666")    // Grey for descriptions
 
-  // I have to check / correct these weird tricks
   let to-string(content) = {
     if content.has("text") {
       if type(content.text) == "string" {
@@ -32,13 +31,6 @@
       " "
     }
   }
-
-  show link: it => {
-    set text(size: 0.7em)
-    it
-  }
-
-  // until here
 
   set page(
     paper: paper,
@@ -74,9 +66,15 @@
       // Sidebar
       // Contact information
       section-title("Contact Info")
-      for (key, value) in contact {
-        link(to-string(value))
-        linebreak()
+      for (value) in contact {
+        if value.link != none {
+          [
+            #link(to-string(value.link))[#value.text]
+          ]
+        } else {
+          [#value.text]
+        }
+        v(0.3em)
       }
 
       if skills != () {

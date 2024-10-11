@@ -2,12 +2,16 @@
 name: Florence Ghestem
 summary: _Ph.D_ candidate in Biostatistics based in Paris, France. I am specializing in genotype-phenotype associations through high dimensional data integration.
 contact:
-  lab: CESP - INSERM
-  location: Paris, France
-  website: https://florenceghestem.github.io/
-  orcid: https://orcid.org/0009-0000-0699-7751
-  linkedin: https://linkedin.com/in/florence-ghestem-data-sciences
-  github: https://github.com/FlorenceGhestem
+  - text: CESP, INSERM, Paris
+    link: none
+  - text: Personal website
+    link: https://florenceghestem.github.io/
+  - text: LinkedIn
+    link: https://linkedin.com/in/florence-ghestem-data-sciences
+  - text: ORCID
+    link: https://orcid.org/0009-0000-0699-7751
+  - text: GitHub
+    link: https://github.com/FlorenceGhestem
 skills:
   - name: IT
     items:
