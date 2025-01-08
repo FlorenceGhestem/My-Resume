@@ -72,6 +72,6 @@ format:
     date: last-modified
     number-sections: true
     template-partials:
-      - assets/typst/typst-template.typ
-      - assets/typst/typst-show.typ
+      - assets/cv-en/typst-template.typ
+      - assets/cv-en/typst-show.typ
 ---

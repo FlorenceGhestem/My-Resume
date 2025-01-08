@@ -1,0 +1,76 @@
+---
+name: Florence Ghestem
+summary: Doctorante en biostatistiques à l'INSERM, je me spécialise dans l'identification d'associations génotype-phénotype à partir de données multidimensionnelles. Je postule pour la mission doctorale en valorisation des résultats de recherche à l'Université Paris-Saclay.
+contact:
+  - text: "CESP, INSERM, Paris"
+    link: none
+  - text: "Site professionnel: 'https://florenceghestem.github.io/'"
+    link: none
+  - text: "LinkedIn: 'https://linkedin.com/in/florence-ghestem-data-sciences'"
+    link: none
+  - text: "ORCID: 'https://orcid.org/0009-0000-0699-7751'"
+    link: none
+  - text: "GitHub: 'https://github.com/FlorenceGhestem'"
+    link: none
+skills:
+  - name: Informatique
+    items:
+      - Langages de programmation (R, Python)
+      - Gestion de bases de données SQL (Bigquery) et NoSQL
+      - Versionning de code et gestion de projet avec GitHub
+      - Outils de veille bibliographique, gestion de références (Zotero, Quarto)
+      - Pack Office (Word, Excel, PowerPoint)
+  - name: Languages
+    items:
+      - "Anglais: niveau C1 (TOEIC 975 points)"
+      - "Espagnol: niveau B1"
+main_sections:
+  - title: Expérience professionnelle
+    entries:
+      - title: Doctorante en biostatistiques
+        date: Septembre 2024 - Aujourd'hui
+        organization: CESP - INSERM
+        location: Villejuif, France
+        description:
+          - Développement de méthodes pour identifier des sous groupes de patients grâce à l'intégration de données phénotypiques en grande dimension.
+          - Identification d'associations génotype-phénotype.
+      - title: Consultante en biostatistiques
+        date: 2022 – 2024
+        organization: IT&M Stats
+        location: Boulogne-Billancourt, France
+        description:
+          - Analyse statistique d'études visant à relier des biomarqueurs cutanés à des signes cliniques (PLS, analyses factorielles, modèles mixtes).
+          - Suivi et gestion de projet d'une cohorte de 10 000 personnes.
+          - Veille bibliographique.
+      - title: Stage - Data scientist (6 mois)
+        date: 2022
+        organization: Chanel
+        location: Paris, France
+        description:
+          - "Data management:  création d'une base de données de performance clinique des produits."
+          - "Statistiques descriptives, modèles à équations structurelles"
+  - title: Formation
+    entries:
+      - title:
+          - "Master 2 Science des données pour à la biologie"
+        date: 2019-2022
+        organization: Institut Agro
+        location: Rennes, France
+        description: 
+          - "Analyse factorielle, apprentissage automatique, informatique, économie, statistiques appliquées aux données de perception."
+          - "Mémoire : Construction et Évaluation de Scores de Performance Clinique"
+      - title: DUT Génie Biologique option Agronomie
+        date: 2017-2019
+        organization: Avignon Univeristy
+        location: Avignon, France
+        description: 
+          - Statistiques, bioinformatique, génétique, biologie végétale et animale.
+format:
+  typst:
+    page: a4
+    date: last-modified
+    number-sections: true
+    template-partials:
+      - assets/cv-fr/typst-template.typ
+      - assets/cv-fr/typst-show.typ
+---
