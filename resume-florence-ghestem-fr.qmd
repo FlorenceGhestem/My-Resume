@@ -25,7 +25,7 @@ skills:
       - "Anglais: niveau C1 (TOEIC 975 points)"
       - "Espagnol: niveau B1"
 main_sections:
-  - title: Experience
+  - title: Expérience professionnelle
     entries:
       - title: Doctorante en biostatistiques
         date: Septembre 2024 - Aujourd'hui
@@ -49,7 +49,7 @@ main_sections:
         description:
           - "Data management:  création d'une base de données de performance clinique des produits."
           - "Statistiques descriptives, modèles à équations structurelles"
-  - title: Education
+  - title: Formation
     entries:
       - title:
           - "Master 2 Science des données pour à la biologie"

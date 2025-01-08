@@ -65,7 +65,7 @@
     {
       // Sidebar
       // Contact information
-      section-title("Contact Info")
+      section-title("Contact")
       for (value) in contact {
         if value.link != none {
           [
@@ -78,7 +78,7 @@
       }
 
       if skills != () {
-        section-title("Skills")
+        section-title("Compétences")
         for category in skills {
           text(weight: "bold")[#category.name]
           set text(size: 0.8em)
